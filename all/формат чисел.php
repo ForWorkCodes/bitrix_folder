@@ -1,0 +1,1 @@
+<?=CurrencyFormatNumber($cartData['PRICE']['PRICE'], $cartData['PRICE']['CURRENCY'])?>

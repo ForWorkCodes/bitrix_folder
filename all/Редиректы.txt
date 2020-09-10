@@ -1,0 +1,43 @@
+#Редирект на https
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+#Редирект с www на без-www
+RewriteCond %{HTTP_HOST} ^www.maincargo.ru$ [NC]
+RewriteRule ^(.*)$ https://maincargo.ru/$1 [R=301,L]
+
+#Добавляем слеш в конец, если его нет
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^(.*[^/])$ $1/ [L,R=301]
+
+#Убираем лишние слеши
+RewriteEngine On
+RewriteCond %{REQUEST_URI} ^(.*)/{2,}(.*)$
+RewriteRule (.*) %1/%2 [R=301,L]
+
+############################################################################
+#### Убираем повторяющиеся слеши (/) в URL                              ####
+############################################################################
+RewriteEngine On
+RewriteCond %{THE_REQUEST} //
+   # Проверяем, повторяется ли слеш (//) более двух раз.
+RewriteCond %{QUERY_STRING} !http(s|)://
+  # Убедимся что это не урл в  GET
+RewriteRule .* /$0 [R=301,L]
+   # Исключаем все лишние слеши.
+
+
+#удаляем слеши для главной http://site.ru/////
+RewriteCond %{THE_REQUEST} ([^\s]*)\/{2,}(\?[^\s]*)?
+RewriteRule (.*) / [R=301,L]
+
+#Удалить все слеши в конце
+RewriteBase /
+RewriteCond %{HTTP_HOST} (.*)
+RewriteCond %{REQUEST_URI} /$ [NC]
+RewriteRule ^(.*)(/)$ $1 [L,R=301]

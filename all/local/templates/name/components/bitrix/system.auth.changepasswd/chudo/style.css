@@ -1,0 +1,18 @@
+.w200 {
+	width: 200px;
+	min-width: 200px;
+}
+.change-pas-form {
+	width: 50%;
+	min-width: 300px;
+}
+.change-pas-form label {
+	padding-bottom: 10px;
+	display: block;
+}
+.green {
+	color: green;
+}
+.red {
+	color: red;
+}

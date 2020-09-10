@@ -1,0 +1,19 @@
+.new-type {
+	padding-bottom: 30px;
+}
+.new-type .karkas__image {
+	padding-bottom: 20px;
+}
+.new-type-container {
+	padding-top: 50px;
+	display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+.new-type-container .karkas__button_theme-price {
+	margin-top: 5px;
+}
