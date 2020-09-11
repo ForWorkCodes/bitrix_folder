@@ -1,0 +1,34 @@
+{
+  "type" : "notification",
+  "event" : "payment.canceled",
+  "object" : {
+    "id" : "26d81211-000f-5000-9000-1382b3b376d3",
+    "status" : "canceled",
+    "paid" : false,
+    "amount" : {
+      "value" : "995.00",
+      "currency" : "RUB"
+    },
+    "created_at" : "2020-08-26T06:16:49.058Z",
+    "description" : "Заказ №60 подписка",
+    "metadata" : {
+      "BX_ORDER_NUMBER" : "144",
+      "BX_PAYMENT_NUMBER" : "140",
+      "cms_name" : "api_1c-bitrix",
+      "ORDER_WITH_SUBS" : "1",
+      "BX_HANDLER" : "YANDEX_CHECKOUT",
+      "BX_PAYSYSTEM_CODE" : "2",
+      "scid" : "1831392"
+    },
+    "recipient" : {
+      "account_id" : "722941",
+      "gateway_id" : "1738925"
+    },
+    "refundable" : false,
+    "test" : true,
+    "cancellation_details" : {
+      "party" : "yandex_checkout",
+      "reason" : "expired_on_confirmation"
+    }
+  }
+}

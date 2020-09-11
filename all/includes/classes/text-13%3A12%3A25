@@ -1,0 +1,53 @@
+{
+  "type" : "notification",
+  "event" : "payment.succeeded",
+  "object" : {
+    "id" : "26d99a9e-000f-5000-9000-17d959597eab",
+    "status" : "succeeded",
+    "paid" : true,
+    "amount" : {
+      "value" : "995.00",
+      "currency" : "RUB"
+    },
+    "authorization_details" : {
+      "rrn" : "413267693784",
+      "auth_code" : "692238"
+    },
+    "captured_at" : "2020-08-27T10:12:23.515Z",
+    "created_at" : "2020-08-27T10:11:42.876Z",
+    "description" : "Заказ №248",
+    "metadata" : {
+      "BX_ORDER_NUMBER" : "248",
+      "BX_PAYMENT_NUMBER" : "316",
+      "SUBS" : "1622",
+      "cms_name" : "api_1c-bitrix",
+      "BX_HANDLER" : "YANDEX_CHECKOUT",
+      "BX_PAYSYSTEM_CODE" : "2",
+      "scid" : "1831392"
+    },
+    "payment_method" : {
+      "type" : "bank_card",
+      "id" : "26d99a9e-000f-5000-9000-17d959597eab",
+      "saved" : true,
+      "card" : {
+        "first6" : "411111",
+        "last4" : "1111",
+        "expiry_month" : "01",
+        "expiry_year" : "2020",
+        "card_type" : "Visa",
+        "issuer_country" : "US"
+      },
+      "title" : "Bank card *1111"
+    },
+    "recipient" : {
+      "account_id" : "722941",
+      "gateway_id" : "1738925"
+    },
+    "refundable" : true,
+    "refunded_amount" : {
+      "value" : "0.00",
+      "currency" : "RUB"
+    },
+    "test" : true
+  }
+}

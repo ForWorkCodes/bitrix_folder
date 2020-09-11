@@ -1,0 +1,52 @@
+{
+  "type" : "notification",
+  "event" : "payment.succeeded",
+  "object" : {
+    "id" : "26ed56f0-000f-5000-8000-13d17f2750e0",
+    "status" : "succeeded",
+    "paid" : true,
+    "amount" : {
+      "value" : "1794.00",
+      "currency" : "RUB"
+    },
+    "authorization_details" : {
+      "rrn" : "812581099355",
+      "auth_code" : "098017"
+    },
+    "captured_at" : "2020-09-11T09:29:02.859Z",
+    "created_at" : "2020-09-11T09:28:16.895Z",
+    "description" : "Заказ №254",
+    "metadata" : {
+      "BX_ORDER_NUMBER" : "254",
+      "BX_PAYMENT_NUMBER" : "322",
+      "cms_name" : "api_1c-bitrix",
+      "BX_HANDLER" : "YANDEX_CHECKOUT",
+      "BX_PAYSYSTEM_CODE" : "2",
+      "scid" : "1831392"
+    },
+    "payment_method" : {
+      "type" : "bank_card",
+      "id" : "26ed56f0-000f-5000-8000-13d17f2750e0",
+      "saved" : false,
+      "card" : {
+        "first6" : "675964",
+        "last4" : "8453",
+        "expiry_month" : "01",
+        "expiry_year" : "2022",
+        "card_type" : "MasterCard",
+        "issuer_country" : "US"
+      },
+      "title" : "Bank card *8453"
+    },
+    "recipient" : {
+      "account_id" : "722941",
+      "gateway_id" : "1738925"
+    },
+    "refundable" : true,
+    "refunded_amount" : {
+      "value" : "0.00",
+      "currency" : "RUB"
+    },
+    "test" : true
+  }
+}
